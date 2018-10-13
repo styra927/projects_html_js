@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function(){          
+            btnCheck.onclick = function(){      
+            var nNumber = document.getElementById("nNumber").value;    
+            if (nNumber % 2 == 0){
+                alert(true);
+            }
+            else{
+                alert(false);    
+            }
+        }
+        };
+    </script>  
+</head>
+<body>
+        <input id="nNumber" type="number" placeholder="Enter number"/> 
+        <input id="btnCheck" type="button" value="Check if even"/>
+
+        <p id="pResult"></p>
+  
+</body>
+
+</html>

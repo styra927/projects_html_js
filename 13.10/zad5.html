@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+         window.onload = function(){  // zdarzenie, które jest ładowane jak załadowana strona + jakie zdarzenie ma wykonać strona jak załaduje się strona
+            var btnCheck = document.getElementById("btnCheck");
+            btnCheck.onclick = function(){ 
+                var number = document.getElementById("nNumber").value;
+                var result = 1;
+                
+                for(var i = 2; i <= number; i++ ){
+                    result *= i;
+                }
+                
+                document.getElementById("pResult").innerHTML = 'factorial for ' + number + " is " + result;
+            }
+            };   
+    </script>  
+</head>
+<body>
+        <input id="nNumber" type="number" placeholder="Enter number"/>  <!-- w kluczowych elementach nadaje się id, ponieważ elementy mogą się dublować --> <!--js nie za bardzo akceptuje myślniki-->
+        <input id="btnCheck" type="button" value="Calculate factorial"/>
+        <p id="pResult"></p>
+  
+</body>
+
+</html>
