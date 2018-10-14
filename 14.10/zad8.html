@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>odnośniki</title>
+    <style>
+        #zabawa {
+            text-decoration: none;
+            width: 200px;
+            height: 65px;
+            display: block;
+        }
+        #zabawa:link {
+            background-image: url("link.jpg");
+        }
+        #zabawa:hover {
+            background-image: url("hover.jpg");
+        }
+        #zabawa:active {
+            background-image: url("aktywny.jpg");
+        }
+        #zabawa:visited {
+            background-image: url("odwiedzony.jpg");
+        }
+    </style>
+</head>
+<body>
+    <a href="http://wp.pl"> <img src="obrazek.jpg" alt="mapa kwadracików" usemap="#mapa"></a>
+    <map name="mapa">
+        <area shape="rect" coords="0,0,78,78" href="http://onet.pl" alt="kwadrat czerwony">
+        <area shape="rect" coords="78,78,156,156" href="http://boredpanda.com" alt="kwadrat żółty">
+    </map>
+    <br>
+    <a href="http://www.wsb.pl" id="zabawa"></a>
+</body>
+</html>
