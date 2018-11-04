@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function NWD(number1, number2){
+            var lowerNumber; 
+            if(number1 < number2)
+                lowerNumber = number1;
+            else
+                lowerNumber = number2;
+
+            for( i = lowerNumber; i > 0 ; i--){
+                if(number1 % i == 0 && number2 % i == 0){
+                    return i; //koniec działania
+                }
+            }
+
+        }
+
+        //coś tu nie działa
+        
+        function NWDEuklides(number1, number2){
+            while(number1 > 0 && number2 > 0){  //albo number1 * number 2 > 0
+                if (number1 > number2){
+                    number1 %= number2;
+                else
+                    number2 %= number1;
+                    
+                } 
+                return number1 + number2;
+            }
+        }
+
+
+         window.onload = function(){  
+            var btnCheck = document.getElementById("btnCheck"); //bierze przycisk z htmla
+            btnCheck.onclick = function(){ //podczepiamy zdarzenia
+                var n1 = document.getElementById("nNumber1").value;
+                var n2 = document.getElementById("nNumber2").value;
+                // var nwd = NwD(n1, n2)
+                document.getElementById("pResult").innerHTML = "NWD: " + NWDEuklides(n1, n2);
+
+
+                /*var lowerNumber; // undefined == null -> true
+                //if (lowerNumber == undefined)
+                if(number1 < number2)
+                    lowerNumber = number1;
+                else 
+                    lowerNumber = number2;
+
+                for( i = lowerNumber; i > 0 ; i-- ) { //16, 15, 14 
+                    if(number1 % 1 == 0  && number2 % i == 0){
+                        document.getElementById("pResult").innerHTML = "NWD: " + i.toString() + ", ";
+                        break;
+                    }
+                }*/
+            };
+        };   
+
+    </script>  
+</head>
+<body>
+        <input id="nNumber1" type="number" placeholder="Enter number"/>  
+        <input id="nNumber2" type="number" placeholder="Enter number"/>  
+        <input id="btnCheck" type="button" value="nwd"/>
+        <p id="pResult"></p>
+</body>
+
+</html>
