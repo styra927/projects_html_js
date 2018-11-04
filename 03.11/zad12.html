@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload= function() { // wyszukiwanie czy w opisie produktu się coś znajduje
+            
+            var pProductDescription = document.getElementById("pProductDescription");
+            var pProductDescriptionOriginalText = document.getElementById("pProductDescription").innerHTML;
+            var tSearch = document.getElementById("tSearch");
+
+            tSearch.onkeyup = function(){
+                var tSearchText = this.value;
+                pProductDescription.innerHTML = pProductDescriptionOriginalText.replace (
+                                                new RegExp(tSearchText, 'g'), //tekst wyszukuje nam globalnie
+                                                '<span style="background-color: yellow";>' + tSearchText + '</span>');
+            };
+            /*nie działa, ale ma robić to że jak wpisujemy tekst to na bieżąco waliduje
+                var tSearchText = this.value;
+                alert(tSearchText);   
+            var pDescription = document.getElementById("pProductDescription").innerHTML;
+            //alert(pDescription.length); // liczba znaków
+            //alert(pDescription.indexOf("Studia")); //pozycja wyrazu w tekście 
+            // TO FIX alert(pDescription.trim().toLowerCase().indexOf("Studia")); //pozycja wyrazu w tekście, funkcja tolowercase daje wszystkie wprowadzone znaki na lower case
+            // alert(pDescription.replace("działających w środowisku Internet","Studia poświęcone"));  // zamieniamy jakiś tekst na inny tekst
+            TO FIX: alert(pDescription.substring
+                pDescription.indexOf("dla wszystkich osób, ") + "dla wszystkich osób, ".length; // wycina jakiś tekst
+               // pDescription.length - (pDescription.indexOf("dla wszystkich osób, ")) + "dla wszystkich osób, ".length;
+               pDescription.length 
+            );*/
+
+
+        };
+        "dla wszystkich osób, "
+        "które chciałyby zostać programistą aplikacji webowych"
+    </script>  
+</head>
+<body>
+        <input id="tSearch" type="text" placeholder="podaj tekst wyszukiwania"/>  
+        <p id="pProductDescription">Studia poświęcone są nauce programowania nowoczesnych serwisów internetowych oraz złożonych rozproszonych systemów informatycznych działających w środowisku Internet, wykorzystujących w warstwie prezentacji przeglądarkę internetową. Niniejsze studia podyplomowe stanowią podstawę, bądź uzupełnienie wcześniej zdobytych wiadomości o narzędzia wykorzystywane przy tworzeniu nowoczesnych serwisów internetowych. Dają one także możliwość aktualizacji wiedzy dla osób, które edukację informatyczną zakończyły kilka lat temu. Są przeznaczone nie tylko dla informatyków, ale dla wszystkich osób, które chciałyby zostać programistą aplikacji webowych
+        </p>
+</body>
+
+</html>

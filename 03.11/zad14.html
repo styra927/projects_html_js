@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload= function() { 
+            var dBirthday = document.getElementById("dBirthday");
+            var pResult = document.getElementById("pResult");
+
+            dBirthday.onchange = function() {
+                var birthdayDate = new Date(this.value); 
+                var actualDate = new Date();
+
+                if(actualDate.getFullYear() - birthdayDate.getFullYear() >= 18){
+                    pResult.innerHTML = "Pełnoletni rocznikowo";
+                }
+                else{
+                    pResult.innerHTML = "niepełnoletni rocznikowo";
+                }
+
+            }
+
+                
+            //alert(actualDate.toDateString) // po kropce możemy ustawić, który parametr daty nam pobiera
+            };
+        };
+
+
+
+
+
+
+
+
+
+
+
+
+/*  NAPISANE NA ZAJĘCIACH
+            var actualDate = new Date(); // pobiera aktualną datę
+            /*alert(actualDate.getMonth());
+            alert(actualDate.getDay()); */
+/*
+            var dBirthday = document.getElementById("dBirthday");
+            dBirthday.onchange = function() {
+                alert(new Date(this.value).getFullYear()); 
+            //alert(actualDate.toDateString) // po kropce możemy ustawić, który parametr daty nam pobiera
+            };
+        };
+
+*/
+
+//napisać - sprawdza czy osoba jest pełnoletnia rocznikowo
+//napisać - sprawdza czy osoba jest pełnoletnia (miesiące i dni)
+    </script>  
+</head>
+<body>
+        <input id="dBirthday" type="date"/>  
+        <p id="pProductDescription"></p>
+</body>
+
+</html>
