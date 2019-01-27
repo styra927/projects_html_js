@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery</title>
+    <!--<script src="js/jquery-3.3.1.min.js"></script> -->
+    <!--za pomocą CDN-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        
+        $(document).ready(function(){   
+           $("tr:odd").css("background", "yellow");
+           $("tr:even").css("background", "orange");
+           $("p:first").css("background", "red");
+           $("p:last").css("background", "green");
+           $("p:nth-child(3)").css("background", "lightblue");
+        });
+    </script>
+</head>
+<body> 
+    <table border="1">
+        <thead>
+            <tr>
+                <th>lp.</th>
+                <th>imie</th>
+                <th>nazwisko</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>sed cew</td>
+                    <td>sdcweewd</td>
+                </tr>
+            </tbody>
+        <tbody>
+            <tr>
+                <td>2</td>
+                <td>sdgre</td>
+                <td>sdrfsd</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>3</td>
+                <td>dsrgrdf</td>
+                <td>sgfrsd</td>
+            </tr>
+        </tbody>
+    </table>
+    <p id="inny">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora rerum nobis laudantium tempore aut eveniet dignissimos corrupti enim neque asperiores, laborum incidunt consectetur dolor minima illo facere quod ea? Consequuntur?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora rerum nobis laudantium tempore aut eveniet dignissimos corrupti enim neque asperiores, laborum incidunt consectetur dolor minima illo facere quod ea? Consequuntur?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora rerum nobis laudantium tempore aut eveniet dignissimos corrupti enim neque asperiores, laborum incidunt consectetur dolor minima illo facere quod ea? Consequuntur?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora rerum nobis laudantium tempore aut eveniet dignissimos corrupti enim neque asperiores, laborum incidunt consectetur dolor minima illo facere quod ea? Consequuntur?</p>
+    <p class="klasa">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora rerum nobis laudantium tempore aut eveniet dignissimos corrupti enim neque asperiores, laborum incidunt consectetur dolor minima illo facere quod ea? Consequuntur?</p>
+
+    <form action="">
+        <label>nazwa użytkownika: <input type="text"></label>
+        <label>hasło użytkownika: <input type="password"></label>
+        <input type="submit" value="zaloguj się">
+    </form>
+</body>
+</html>

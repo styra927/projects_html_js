@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery</title>
+    <!--<script src="js/jquery-3.3.1.min.js"></script> -->
+    <!--za pomocą CDN-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        
+        $(document).ready(function(){   
+          $("button").click(function(){
+            var imie = $("input").val(); // jeżeli wyciągamy coś z formularzy to VALEM, a nie tekstem
+            alert("witaj użytkowniku " + imie);
+          });
+          $("#best").click(function(){
+            $("input").val("Klaudia");
+          });
+        });
+    </script>
+</head>
+<body> 
+    <form>
+        <label>Wpisz swoje imię</label>
+        <input type="text">
+    </form>
+    <button>wejdź</button>
+    <button id="best">najlepsze imię</button>
+</body>
+</html>

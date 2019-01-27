@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery</title>
+    <!--<script src="js/jquery-3.3.1.min.js"></script> -->
+    <!--za pomocą CDN-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        
+        $(document).ready(function(){   
+          $("#all").click(function(){
+            var str = $("p").text();
+            alert(str);
+          });
+          $("#first").click(function(){
+            var str = $("p:first").text();
+            alert(str);
+          });
+          $("#new").click(function(){
+            $("p").text("Ala ma kota");
+          });
+          $("#html").click(function(){
+            var str = $("#box").html();
+            alert(str);
+          });
+          $("#nowe").click(function(){
+            $("#box").text("Ala ma kota");
+          });
+        });
+    </script>
+</head>
+<body> 
+    <button id="all">wszystkie</button>
+    <button id="first">pierwszy</button>
+    <button id="new">nowy tekst</button>
+    <button id="html">HTML</button>
+    <button id="nowe">nowe</button>
+    <div id="box">
+        <p>akapit 1 </p>
+        <p>akapit 2 </p>
+        <p>akapit 3 </p>
+    </div>
+</body>
+</html>

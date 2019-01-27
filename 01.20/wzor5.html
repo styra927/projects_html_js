@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery</title>
+    <!--<script src="js/jquery-3.3.1.min.js"></script> -->
+    <!--za pomocą CDN-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <style>
+        p{
+            padding: 20px;
+            font: 20px sans-serif;
+            background: khaki;
+        }
+        .podswietl{
+            background: orange;
+        }
+    </style>
+    <script>
+        
+        $(document).ready(function(){   
+            $("p").dblclick(function(){
+                $(this).slideUp();
+            });
+            // $("p").hover(function(){
+            //     $(this).addClass("podswietl");
+            // }, function(){
+            //     $(this).removeClass("podswietl");
+            // });
+            $("p").mouseenter(function(){ //funkcja anonimowa (function)
+                $(this).addClass("podswietl"); //gdy najadę, dostanę klasę "podświetl"
+            });
+            $("p").mouseleave(function(){
+                $(this).removeClass("podswietl");
+            });
+        
+        });
+    </script>
+</head>
+<body> 
+    <p>Naciśnij mnie</p>
+    <p>Naciśnij mnie</p>
+    <p>Naciśnij mnie</p>
+    <p>Naciśnij mnie</p>
+</body>
+</html>

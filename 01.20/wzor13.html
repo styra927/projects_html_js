@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery</title>
+    <!--<script src="js/jquery-3.3.1.min.js"></script> -->
+    <!--za pomocą CDN-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <style>
+        p{
+            padding: 15px;
+            background: lime;
+        }
+    </style>
+    <script>
+        
+        $(document).ready(function(){   //ukrywamy akapity
+          $("#ukryj").click(function(){
+            $("#bszybko").hide(50);
+            $("#normalnie").hide(); // 400ms
+            $("#szybko").hide("fast"); // 200 ms
+            $("#wolno").hide("slow"); //600 ms
+            $("#bwolno").hide(2000); 
+          });
+          $("#pokaz").click(function(){  //pokaz akapity
+            $("p").show();
+          });
+        });
+    </script>
+</head>
+<body> 
+    <button type="button" id="ukryj">schowaj akapit</button>
+    <button type="button" id="pokaz">pokaż akapit</button>
+    <p id="bszybko"> akapit 1</p>
+    <p id="normalnie"> akapit 2</p>
+    <p id="szybko"> akapit 3</p>
+    <p id="wolno"> akapit 4</p>
+    <p id="bwolno"> akapit 5</p>
+</body>
+</html>

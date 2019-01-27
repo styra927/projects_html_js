@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery</title>
+    <!--<script src="js/jquery-3.3.1.min.js"></script> -->
+    <!--za pomocą CDN-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <style>
+        .p {
+            width: 100%;
+            padding: 50px, 0;
+            text-align: center;
+            font: bold 34px sans-serif;
+            background: lightgreen;
+            position: fixed;
+            top: 50px;
+            display: none;
+        }
+        .durny-tekst {
+            font: 34px sans-serif;
+            text-align:center;
+            height: 600px;
+        }
+    </style>
+    <script>
+        
+        $(document).ready(function(){   
+          $(window).scroll(function(){
+            $("p").show().fadeOut("slow");
+          });
+        });
+    </script>
+</head>
+<body> 
+    <p>scrollowanie</p>
+    <div class="durny-tekst">ala ma kota</div>
+    <div class="durny-tekst">ala ma kota</div>
+    <div class="durny-tekst">ala ma kota</div>
+    <div class="durny-tekst">ala ma kota</div>
+    <div class="durny-tekst">ala ma kota</div>
+    <div class="durny-tekst">ala ma kota</div>
+    <div class="durny-tekst">ala ma kota</div>
+    <div class="durny-tekst">ala ma kota</div>
+</body>
+</html>

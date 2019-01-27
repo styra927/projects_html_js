@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery</title>
+    <!--<script src="js/jquery-3.3.1.min.js"></script> -->
+    <!--za pomocą CDN-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        
+        $(document).ready(function(){   
+          $("#getadd").click(function(){
+            var add = $("a").attr("href");
+            alert(add);
+          });
+          $("#setadd").click(function(){
+            $("a").attr("href","http://onet.pl").text("ONET"); // wyszujuję odnośnik, mówię że ma być to atrybut href i zamieniam na onet.pl
+          });
+          $("#setimg").click(function(){
+            $("img").attr("src","img/2.jpg").attr("alt", "ludzik");
+          });
+        });
+    </script>
+</head>
+<body> 
+    <button id="getadd">pobierz adres</button>
+    <button id="setadd">zmień adres</button>
+    <button id="setimg">źródło obrazka</button>
+    <button id="getimg">zmień obrazek</button>
+<p>
+    <a href="http://wp.pl">wp</a>
+</p>
+<p>
+    <img src="img/sun.jpg" alt="słoneczko">
+</p>
+
+</body>
+</html>

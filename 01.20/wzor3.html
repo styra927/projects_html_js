@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery</title>
+    <!--<script src="js/jquery-3.3.1.min.js"></script> -->
+    <!--za pomocą CDN-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        
+        $(document).ready(function(){   
+            $("p").css("background", "yellow");
+            $("#inny").css("background", "green");
+            $("p.klasa").css("background", "orange");
+            $("input[type='text']").css("background", "pink");
+            $("input[type='password']").css("background", "blue");
+            $("input[type='submit']").css("background", "magenta");
+            $("ul li").css("background", "#00ff22");
+            $("ul#lista2 li").css("background", "yellow");
+            $("ul.lista3 li").css("background", "gray");
+            $("a[target='_blank']").css("background", "lightgreen");
+        });
+    </script>
+
+</head>
+<body> <!--shift + alt + strzałka w dół - duplikujemy-->
+    <p id="inny">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora rerum nobis laudantium tempore aut eveniet dignissimos corrupti enim neque asperiores, laborum incidunt consectetur dolor minima illo facere quod ea? Consequuntur?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora rerum nobis laudantium tempore aut eveniet dignissimos corrupti enim neque asperiores, laborum incidunt consectetur dolor minima illo facere quod ea? Consequuntur?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora rerum nobis laudantium tempore aut eveniet dignissimos corrupti enim neque asperiores, laborum incidunt consectetur dolor minima illo facere quod ea? Consequuntur?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora rerum nobis laudantium tempore aut eveniet dignissimos corrupti enim neque asperiores, laborum incidunt consectetur dolor minima illo facere quod ea? Consequuntur?</p>
+    <p class="klasa">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora rerum nobis laudantium tempore aut eveniet dignissimos corrupti enim neque asperiores, laborum incidunt consectetur dolor minima illo facere quod ea? Consequuntur?</p>
+
+    <form action="">
+        <label>nazwa użytkownika: <input type="text"></label>
+        <label>hasło użytkownika: <input type="password"></label>
+        <input type="submit" value="zaloguj się">
+    </form>
+
+    <ul>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, possimus.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, possimus.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, possimus.</li>
+    </ul>
+    <ul id="lista2">
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, possimus.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, possimus.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, possimus.</li>
+    </ul>
+    <ul class="lista3">
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, possimus.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, possimus.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, possimus.</li>
+    </ul>
+    <p>
+        Idź do <a href="http://wp.pl" target="_blank">wirtualna polska</a>
+    </p>
+</body>
+</html>
