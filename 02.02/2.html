@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery</title>
+    <!--<script src="js/jquery-3.3.1.min.js"></script> -->
+    <!--za pomocą CDN-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        
+        $(document).ready(function(){   
+            //Pprzypisz klasę aaa elementom li
+            //$("li").addClass("aaa");
+            //Pprzypisz klasę aaa elementom li
+            //$("li").parent().addClass("aaa");
+            //przypisz klasę aaa rodzeństwu ul
+            //$("li").siblings().addClass("aaa");
+            //przypisz klasę aaa następnemu rodzeństwu po h1
+            //$("h1").next().addClass("aaa");
+            //przypisz klasę aaa następnemu każdemu rodzeństwu po h1
+            //$("h1").nextAll().addClass("aaa");
+            // prev prevAll children
+            //przypisz klasę aaa dzieciom ul
+            //$("ul").children().addClass("aaa");
+            //przypisz klasę aaa wszystkim elementom li wewnątrz kontenera
+            //$("div").find("li").addClass("aaa");
+            //first last eq(equal - w nawiasie podajemy wartość numeryczną który z kolei)
+            //parzystym li nadaj klasę aaa
+            //$("li").filter(":even").addClass("aaa")
+            // li 3-5 nadaj klase aaa
+            $("li").slice("2,5").addClass("aaa");
+        });
+    </script>
+    <style>
+    .aaa {
+        background: yellow;
+        border: 1px solid green;
+    }
+    </style>
+</head>
+<body> 
+    <div id="container">
+        <h1>ala ma kota</p>
+        <p>Zajęcia w dniu <em>2 luty</em></p>
+        <ul>
+            <li>el 1</li>
+            <li>el 2</li>
+        </ul>
+    </div>
+</body>
+</html>
