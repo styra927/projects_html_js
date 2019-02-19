@@ -11,8 +11,24 @@ var a="a", b="b",c="c";
 
 var myVar4 = ["string", 5, true, "string 2"] //array
 
+myVar4.push("string 3"); //push - this is built-in js functio which allows us push additional content
+
+myVar.pop(); //remove the last item in the array
+
+
+
 //console.log(myVar4); ----> ["string", 5, true, "string 2"]
 //console.log(myVar4[3]); - array index starts with 0 ----> ["string", 5, true, "string 2"]
+//console.log(myVar4); ----> ["string", 5, true,"string 2", "string 3"] - means to the previous array myVar4 "string 3" has been added
+//console.log(myVar4.lenght) - the result is 5
+//console.log(myVar4[myVar4.lenght-1]) - 
 
+//myVar4.shift()--removing things from in front of the arrays
+
+//console.log(myVar4.indexOf("string 2")); where a particular item was located within the array (item index)
+
+/*myVar4.forEach(function(i, k){
+    console.log(i + " " + k);
+}) - looping through each item in the array - its showing the item's value and index number */
 alert("hello");
 </script>
