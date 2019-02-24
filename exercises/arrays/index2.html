@@ -30,5 +30,21 @@ myVar.pop(); //remove the last item in the array
 /*myVar4.forEach(function(i, k){
     console.log(i + " " + k);
 }) - looping through each item in the array - its showing the item's value and index number */
+
+//*myVar4.splice(2,1); removes the last 2 items, starting at 2 (jest w nawiasie), removing the number of items that we want to remove (in this case 1 is in the brackets so we will remove 1 item)
+
+//myVar4.sort(); - this one sorts our array values - boolean goes last, numeric value goes first and values in '' goes in the middle
+
+//myVar4.reverse(); - sorts in reverse order
+
+var myVar6 = myVar4.concat(myVar5);  //-- function that outputs combined functions
+
+var myVar7 = myVar4.join(' :)'); // outputs content into the string format - in the brackets there is a separator that we set
+
+var myVar8 = myVar4.toString(); //change an array into the string 
+console.log(myVar6);
+var myVar9 = myVar6.slice(2,4);// slice out apart of a string (returns part of a string)
+console.log(myVar9); // starting position 2 and we are returning 2 nest positions (this is theres 2 in the brackets)
+
 alert("hello");
 </script>
