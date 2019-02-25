@@ -1,0 +1,28 @@
+<!--objects allow us to store them with the named values (that is the difference between arrays and objects)-->
+
+<script>
+    var myObj1 = new Object();
+    myObj1.Car = "Ford";
+    myObj1.Year = 2010;
+    myObj1.Model = "Mustang";
+    myObj1.cost = 50000;
+    myObj1.Year =2015;
+    console.log(myObj1);
+    
+    var myObj2 = {Car:"honda",Year:2017,Model:"civic",cost:30000};
+    console.log(myObj2);
+    
+    var myObj3 = new myFun("Toyota",2015,"Corolla",40000);
+    console.log(myObj3);
+    
+    function myFun(a,b,c,d){
+        this.Car = a;
+        this.Year = b;
+        this.Model = c;
+        this.Cost = d;
+    }
+    
+    console.log(myObj2["Car"]);
+    console.log(myObj3.Car);
+    
+</script>
